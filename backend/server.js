@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: 'https://incredible-puppy-380819.netlify.app' }));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
