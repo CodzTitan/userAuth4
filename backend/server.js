@@ -28,6 +28,7 @@ const User = mongoose.model('User', userSchema);
 
 // Signup route
 app.post('/api/signup', async (req, res) => {
+    console.log("Signup request received:", req.body);
     try {
         const { email, password } = req.body;
         
